@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><span class="space">left - space</span><span>Users</span><span class="space">right - s p a c e</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="inset" class="user-item" *ngFor="let person of users">
+      <ion-thumbnail slot="start" class="user-avatar">
+        <img src="{{ person.avatar }}" alt="" />
+      </ion-thumbnail>
+      <ion-label style="display: flex; flex-direction: column;">
+        <span class="user">{{person.first_name}} {{person.last_name}}</span>
+        <span class="email">{{ person.email }}</span>
+      </ion-label>
+      <!-- <div class="item-note" item-end>
+        <ion-icon name="create" style="zoom:2.0" [routerLink]="['/user']"></ion-icon>        
+        <ion-icon name="trash" (click)="deleteUser(person.id)"></ion-icon>
+      </div> -->
+    </ion-item>
+    <ion-item>
+      <ion-button type="text" class="fakebtn"></ion-button>
+      <ion-button slot="end" type="text" color="primary" class="add-btn" (click)="addUser()">
+        +
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

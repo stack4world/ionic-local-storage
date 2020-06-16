@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Personddddddddddddddddddddd</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="mainForm" (ngSubmit)="addUser()">
+      <ion-item>
+        <ion-label  position="floating">First Name: </ion-label>
+        <ion-input type="text" formControlName="first_name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label  position="floating">Last Name: </ion-label>
+        <ion-input type="text" formControlName="last_name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label  position="floating">Email: </ion-label>
+        <ion-input type="text" formControlName="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label  position="floating">Avatar: </ion-label>
+        <ion-input type="text" formControlName="avatar" required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">
+            Add Person
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
