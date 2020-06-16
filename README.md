@@ -1,0 +1,1 @@
+# ionic-local-storage
