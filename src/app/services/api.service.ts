@@ -60,6 +60,7 @@ export class ApiService {
     // Get list
   getUsers(){
     return this.userData;
+    
   }
 
   getDbstate() {
